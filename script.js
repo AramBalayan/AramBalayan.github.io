@@ -65,50 +65,65 @@ function getRandomArbitrary(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 
-$(document).ready(function () {
-	setInterval(function () {
-		var screenHeight = $(document).height();
-		var screenWidth = $(document).width();
+// $(document).ready(function () {
+// 	setInterval(function () {
+// 		var screenHeight = $(document).height();
+// 		var screenWidth = $(document).width();
 
-		var startLeft = getRandomArbitrary(0, screenWidth);
+// 		var startLeft = getRandomArbitrary(0, screenWidth);
 
-		var timeRun = getRandomArbitrary(4000, 6000);
-		var opacityR = Math.random() * (1 - 0.2) + 0.2;
-		var sizeR = getRandomArbitrary(10, 40);
+// 		var timeRun = getRandomArbitrary(4000, 6000);
+// 		var opacityR = Math.random() * (1 - 0.2) + 0.2;
+// 		var sizeR = getRandomArbitrary(10, 40);
 
-		var endLeft = getRandomArbitrary(startLeft - 100, startLeft + 100);
+// 		var endLeft = getRandomArbitrary(startLeft - 100, startLeft + 100);
 
-		var snow = document.createElement("span");
+// 		var snow = document.createElement("span");
 
-		$(snow)
-			.addClass("snow-item fa fa-heart")
-			.css({
-				position: "absolute",
-				"z-index": "1",
-				color: "#ffffff",
-				display: "block",
-				top: 0,
-				left: startLeft,
-				opacity: opacityR,
-				"font-size": sizeR + "px",
-			})
-			.appendTo("body")
-			.animate(
-				{
-					top: screenHeight - sizeR,
-					left: endLeft,
-				},
-				{
-					duration: timeRun,
-					easing: "linear",
-					complete: function () {
-						$(this).fadeOut("fast", function () {
-							$(this).remove();
-						});
-					},
-				}
-			);
-	}, 500);
-});
+// 		$(snow)
+// 			.addClass("snow-item fa fa-heart")
+// 			.css({
+// 				position: "absolute",
+// 				"z-index": "1",
+// 				color: "#ffffff",
+// 				display: "block",
+// 				top: 0,
+// 				left: startLeft,
+// 				opacity: opacityR,
+// 				"font-size": sizeR + "px",
+// 			})
+// 			.appendTo("body")
+// 			.animate(
+// 				{
+// 					top: screenHeight - sizeR,
+// 					left: endLeft,
+// 				},
+// 				{
+// 					duration: timeRun,
+// 					easing: "linear",
+// 					complete: function () {
+// 						$(this).fadeOut("fast", function () {
+// 							$(this).remove();
+// 						});
+// 					},
+// 				}
+// 			);
+// 	}, 500);
+// });
 
 
+
+function createHeart() {
+  const heart = document.createElement("img");
+  heart.src = "img/heart-icon-3339.png";
+  heart.classList.add("heart");
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = Math.random() * 5 + 3 + "s ";
+  // heart.innerText = "🦄";
+  document.body.appendChild(heart);
+  setTimeout(() => {
+    heart.remove();
+  }, 3000);
+}
+
+setInterval(createHeart, 300)
