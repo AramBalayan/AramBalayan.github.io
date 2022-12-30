@@ -17,7 +17,7 @@ btn.onclick = function () {
 		}
 	});
 
-	body.style.overflow='hidden'
+	// body.style.overflow='hidden'
 	var audio = document.getElementById("myaudio");
   audio.volume = 0.2
 	audio.autoplay = true
@@ -32,7 +32,7 @@ span.onclick = function () {
 		video[i].load();
 		video[i].muted = true
 	}
-	body.style.overflowY='auto'
+	// body.style.overflowY='auto'
 
 };
 
