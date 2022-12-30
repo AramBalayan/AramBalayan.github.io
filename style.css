@@ -24,7 +24,7 @@ header{
 	/* background-blend-mode: overlay; */
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: 55% center;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -36,7 +36,7 @@ header{
 	align-items: center;
 	justify-content: space-around;
 	width: 300px;
-	margin-bottom: 50px;
+	margin-bottom: 150px;
 }
 
 .field p{
@@ -227,7 +227,7 @@ main {
 .swiper-slide h2 {
 	pointer-events: none;
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	letter-spacing: -1px;
 	text-shadow: 0 5px 5px rgba(0, 0, 0, 0.01);
 }
@@ -253,7 +253,7 @@ img {
 
 video{
 	width: 300px;
-	height: 300px;
+	height: 50vh;
 }
 
 .swiper-slide-active .two {
@@ -290,7 +290,13 @@ video{
 	.one img{
 		float: left;
 	}
+	header{
+		background-position:  center;
+	}
 
+	.field {
+    margin-bottom: 50px;
+}
 	
 	.one video{
 		float: left;
