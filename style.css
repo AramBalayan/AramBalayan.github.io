@@ -337,6 +337,7 @@ video{
   /* font-size: 40px; */
   transform: translateY(0);
   animation: fall 3s linear forwards;
+	z-index: 9;
 }
 
 @keyframes fall {
